@@ -1,8 +1,8 @@
 import InputFile from '../comps/inputfile';
 import Dataset from '../comps/surveyDisplay/graphs/datasetprops';
 import {Radar, Doughnut, Bar} from 'react-chartjs-2';
-import { Flex, Box } from 'reflexbox'
-import GaugeChart from 'react-gauge-chart'
+import { Flex, Box } from '@chakra-ui/react'
+// import GaugeChart from 'react-gauge-chart'
 import React from 'react';
 //This component is for refactoring results page so the print button can be added. 
 
@@ -32,7 +32,7 @@ class ComponentToPrint extends React.PureComponent {
                             console.log(finalScore)
                         </script>
                         {/* <h2 id="finalscore">Your overall score is {this.props.finalScore}</h2> */}
-                        <GaugeChart id="gauge-chart2" nrOfLevels={4} percent={this.props.percentageScore} textColor ={"#000000"} colors={[" #ff6384","#ff9f40","#ffcd56","#4bc0c0"]} className="gauge"/>
+                        {/* <GaugeChart id="gauge-chart2" nrOfLevels={4} percent={this.props.percentageScore} textColor ={"#000000"} colors={[" #ff6384","#ff9f40","#ffcd56","#4bc0c0"]} className="gauge"/> */}
                         <h2 id="totalsbargraph"> Bar graph of totals </h2>
                         <Bar data = {this.props.graphObjects['totalsbar'].metaData} options = {this.props.graphObjects['totalsbar'].layout_props} className='totalsBar' />
                     </Box> 
