@@ -3,7 +3,7 @@ import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart }            from 'react-chartjs-2'
 import {Radar, Doughnut, Bar} from 'react-chartjs-2';
 import { Flex, Box } from '@chakra-ui/react'
-// import GaugeChart from 'react-gauge-chart'
+import GaugeChart from 'react-advanced-gauge-chart'
 import React, {useState,useEffect, useRef} from 'react';
 import Head from 'next/head'
 import ReactToPrint, {PrintContextConsumer} from 'react-to-print';
@@ -262,7 +262,7 @@ const results = () => {
                                 {/* <h2 id="finalscore">{showPrevious? 'Your overall score is: '+ finalScore[0] + ' Your score last time was: ' +finalScore[1]:'Your overall score is: '+ finalScore[0]}</h2>
                                 <GaugeChart id="gauge-chart2" nrOfLevels={4}   textColor ={"#000000"} colors={[" #ff6384","#ff9f40","#ffcd56","#4bc0c0"]} className="gauge"/> */}
                                 <h2 id="finalscore">{showPrevious? 'Your overall score is: '+ finalScore[0]+'/3' + ' Your score last time was: ' +finalScore[1] +'/3':'Your overall score is: '+ finalScore[0] +'/3'}</h2>
-                                {/* <GaugeChart id="gauge-chart2" nrOfLevels={4}  percent={percentageScore} textColor ={"#000000"} colors={[" #ff6384","#ff9f40","#ffcd56","#4bc0c0"]} className="gauge"/> */}
+                                <GaugeChart id="gauge-chart2" nrOfLevels={4}  percent={percentageScore} textColor ={"#000000"} colors={[" #ff6384","#ff9f40","#ffcd56","#4bc0c0"]} className="gauge"/>
                                 <h2 id="totalsbargraph" className="totalsBarHeader"> Response count by value </h2>
                                 <Bar data = {totalsBarGraph.metaData} options = {totalsBarGraph.layout_props} className='totalsBar' />
                             </Box> 

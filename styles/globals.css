@@ -44,8 +44,10 @@ footer {
   text-align: center;
 }
 
-      
-
+.percent-text{
+  text-anchor: middle;
+  font-family: 'Roboto', sans-serif;
+}  
 
 
 @font-face {
